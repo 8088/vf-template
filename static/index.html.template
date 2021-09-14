@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="description" content="Helloword base on VF Engine.">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <style>
+        html,body{
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            background-color: #fff;
+        }
+        @font-face {
+            font-family: Druk;
+            src: url(./fonts/hinted-Druk-Medium.woff) format("woff");
+            font-weight: 500;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: Supply;
+            src: url(./fonts/hinted-Supply-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: Supply;
+            src: url(./fonts/hinted-Supply-Regular.woff2) format("woff2"), url(./fonts/hinted-Supply-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: din mittelschrift;
+            src: url(./fonts/din-mittelschrift.woff2) format("woff2"), url(./fonts/din-mittelschrift.woff) format("woff");
+            font-weight: 400;
+            font-style: normal
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://vf-cdn.yunkc.cn/launcher.min.js"></script>
+    <div id="app-container" style="width: 100%; height: 100%; position: absolute; margin:0; overflow: hidden;"></div>
+</body>
+<script>
+    createVF({
+        container: document.getElementById("app-container"),  // 需要放置的容器
+        debug: false,
+        showFPS: false,
+        usePlayer: false,
+        resolution: window.devicePixelRatio || 1,
+        width: window.innerWidth, // 设计尺寸
+        height: window.innerHeight, // 设计尺寸
+        bgcolor: '0xEEEEEE', // 背景色
+        wmode : 'transparent', // 背景透明
+        scaleMode: 'showAll',
+    }, function (e) {
+        
+        vf.utils.readFileSync('./app.js').then(function(value){
+            // 实例化你的项目, 并添加到舞台, 其中 e 的类型为 EngineAPI. 具体查看 'node_modules/@vf.js/launcher/launcher.d.ts
+            const stage = e.uiStage;
+            stage.addChild(new vf.gui.module.default(stage));
+        });
+        
+    });
+</script>
+</html>
