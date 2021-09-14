@@ -57,7 +57,7 @@ export default class Main extends vf.gui.Container {
         this.logo.style.height = this.tl;
         this.logo.style.pivotX = this.tl *.5;
         this.logo.style.pivotY = this.tl *.5;
-        this.logo.style.top = this.sw > this.sh ? this.tl *.6 : this.tl *.7;
+        this.logo.style.top = this.tl *.6;
         this.logo.style.left = this.sw *.5;
         this.addChild(this.logo);
 
@@ -66,7 +66,7 @@ export default class Main extends vf.gui.Container {
         this.label.style.fontSize = Math.round(this.tl*.08);
         this.label.style.color = [ 0xff6600, 0xff00ff, 0x00ffff, 0xff6600, 0xff00ff, 0x00ffff, 0xff6600, 0xff00ff, 0x00ffff];
         this.label.style.width = this.sw;
-        this.label.style.top = this.sw > this.sh ? this.tl * 1.2 : this.tl * 1.4;
+        this.label.style.top = this.tl * 1.2;
         this.label.style.textAlign = 'center';
         this.label.style.fillGradientType = 1;
         this.label.style.fillGradientStops = [0, .1, .36, .37, .46, .6, .66, .67, 1];
@@ -91,7 +91,7 @@ export default class Main extends vf.gui.Container {
         temp.style.height = this.tl;
         temp.style.pivotX = this.tl *.5;
         temp.style.pivotY = this.tl *.5;
-        temp.style.top = this.sw > this.sh ? this.tl *.6 : this.tl *.7;
+        temp.style.top = this.tl *.6;
         temp.style.left = this.sw *.5;
         this.addChild(temp);
 
@@ -118,14 +118,14 @@ export default class Main extends vf.gui.Container {
             this.links.interactabled = true;
             this.links.style.fontSize = Math.round(this.tl*.05);
             this.links.textFlow = '<label color="#333333" fontfamily="Arial">For guidelines and methods on how to configure / customize development projects, please check the </label>'+
-            '<label color="#ff6600" fontfamily="Arial" textdecoration="UnderLine" interactabled=true textDecorationColor="#ff6600" href="https://yunkc.gitee.io/docs/">vf-engine documentation.</label>';
+            '<label color="#ff6600" fontfamily="Arial" textdecoration="UnderLine" textDecorationColor="#ff6600" href="https://yunkc.gitee.io/docs/">vf-engine documentation.</label>';
             this.links.style.width = this.sw > this.sh ? this.tl * 1.6 : this.tl * 1;
             this.links.style.height = this.tl;
             this.links.style.pivotX = this.sw > this.sh ? this.tl * .8 : this.tl * .5;
-            this.links.style.top = this.sw > this.sh ? this.tl * 1.4 : this.tl * 1.6;
+            this.links.style.top = this.tl * 1.35;
             this.links.style.left = this.sw *.5;
             this.links.style.textAlign = 'center';
-            this.links.style.lineHeight = this.links.style.fontSize * 2;
+            this.links.style.lineHeight = this.links.style.fontSize * 1.8;
             this.addChild(this.links);
         }
     }
