@@ -11,7 +11,7 @@
 *.njsproj
 *.sln
 
-vf/package-lock.json
+./package-lock.json
 # Logs
 logs
 *.log

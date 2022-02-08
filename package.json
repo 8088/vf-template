@@ -1,7 +1,7 @@
 {
-  "name": "vf-yunyao",
+  "name": "vf-template",
   "version": "1.0.0",
-  "description": "云邀MVP",
+  "description": "VF项目模版，创建纯VF引擎项目可基于此项目。",
   "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@vf.js/launcher": "^2.0.5",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^9.0.1",
     "ejs-loader": "^0.5.0",
@@ -25,5 +24,7 @@
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.1.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@vf.js/launcher": "^2.0.5"
+  }
 }
