@@ -66,14 +66,13 @@
         resolution: window.devicePixelRatio || 1,
         width: window.innerWidth, // 设计尺寸
         height: window.innerHeight, // 设计尺寸
-        bgcolor: '0xEEEEEE', // 背景色
         wmode : 'transparent', // 背景透明
         scaleMode: 'showAll',
     }, function (e) {
         
         vf.utils.readFileSync('./app.js').then(function(value){
             // 实例化你的项目, 并添加到舞台, 其中 e 的类型为 EngineAPI. 具体查看 'node_modules/@vf.js/launcher/launcher.d.ts
-            const stage = e.uiStage;
+            const stage = e.stage;
             stage.addChild(new vf.gui.module.default(stage));
         });
         

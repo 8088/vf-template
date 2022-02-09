@@ -64,7 +64,7 @@ export default class Main extends vf.gui.Container {
         this.label = new vf.gui.Label();
         this.label.text = 'Wellcome to Your VF.js APP';
         this.label.style.fontSize = Math.round(this.tl*.08);
-        this.label.style.color = [ 0xff6600, 0xff00ff, 0x00ffff, 0xff6600, 0xff00ff, 0x00ffff, 0xff6600, 0xff00ff, 0x00ffff];
+        this.label.style.fillColor = [ [255,0,255,255], [0,255,255,255], [255,102,0,255], [255,0,255,255], [0,255,255,255], [255,102,0,255], [255,0,255,255], [0,255,255,255] ];
         this.label.style.width = this.sw;
         this.label.style.top = this.tl * 1.2;
         this.label.style.textAlign = 'center';
